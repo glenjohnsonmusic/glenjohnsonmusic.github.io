@@ -2,7 +2,7 @@ main:
   - title: "Bio"
     url: /
   - title: "Recording"
-    url: /recording-sessions/
+    url: /recording-sessions
   - title: "Tuition"
     url: /tuition
   - title: "Transcriptions"
