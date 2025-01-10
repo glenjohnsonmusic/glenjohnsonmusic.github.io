@@ -1,0 +1,43 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "Glen Johnson - Musician",
+  "url":"https://www.glenjohnson.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB",
+    "addressLocality": "Dunmow",
+    "addressRegion": "England",
+    "postalCode": "CM6 1EW",
+    "streetAddress": "47A The Close"
+  },
+  "telephone":"+447808507363"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "glenjohnson-musician",
+  "url": "https://www.glenjohnson.co.uk/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  {% if site.social.type == "Organization" -%}
+    "@type": "Organization",
+    "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
+    "logo": {{ site_og_image | jsonify }}{% endif %}{% if site.social.links %},
+    "sameAs": {{ site.social.links | jsonify }}{% endif %}
+  {%- else -%}
+    "@type": "Person",
+    "name": {{ site.social.name | default: site.name | jsonify }},
+    "url": "https://www.glenjohnson.co.uk/"{% if site.social.links %},
+    "sameAs": {{ site.social.links | jsonify }}{% endif %}
+  {%- endif %}
+}
+</script>

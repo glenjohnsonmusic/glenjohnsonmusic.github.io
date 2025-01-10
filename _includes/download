@@ -1,0 +1,7 @@
+{% capture download_type %}{{ include.type }}{% endcapture %}
+{% capture download_src %}{{ include.src }}{% endcapture %}
+
+{% case download_type %}
+{% when "pdf" %}
+  <a href="{{ download_src }}" class="btn btn--success" download><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+{% endcase %}
